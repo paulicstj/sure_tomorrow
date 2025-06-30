@@ -1,9 +1,40 @@
-# sure_tomorrow
-Linear algebra project
-Sure Tomorrow insurance company wants to solve several tasks with the help of machine learning and asks you to evaluate this possibility.
+# 🧮 Sure Tomorrow – Machine Learning and Data Obfuscation for Insurance
 
-Task 1: Find customers who are similar to a given customer. This will help the company's agents with marketing.
-Task 2: Predict whether a new customer is likely to receive an insurance benefit. Can a trained prediction model perform better than an untrained dummy model? Can it perform worse? Explain your answer.
-Task 3: Predict the amount of insurance benefits a new customer is likely to receive using a linear regression model.
-Task 4: Protect customer personal data without breaking the model from the previous task.
-It is necessary to develop a data transformation algorithm that makes it difficult to recover personal information if the data falls into the wrong hands. This is called data masking or data obfuscation. However, the data must be protected in such a way that the quality of the machine learning models is not affected. It is not necessary to choose the best model, it is enough to demonstrate that the algorithm works correctly.
+## 🔍 Project Functionality  
+This project was developed for **Sure Tomorrow**, an insurance company aiming to explore the use of machine learning for four key tasks:
+
+1. **Customer Similarity** – Find clients with similar behavior for marketing purposes.  
+2. **Binary Classification** – Predict whether a customer is likely to receive insurance benefits.  
+3. **Regression** – Predict the exact amount of insurance benefits.  
+4. **Data Obfuscation** – Protect sensitive information using linear algebra, while preserving model performance.
+
+Each task explores both the **statistical foundations** and **machine learning implementation**, with a strong focus on **data transformation** and **model integrity**.
+
+## 🛠️ Technologies and Methods  
+- **Python** (NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn)  
+- **Exploratory Data Analysis (EDA)**:
+  - Distribution analysis of income, benefits, and family size  
+  - Pairplots to visually assess groupings  
+- **Task 1 – Similar Clients**:
+  - Distance-based similarity using **Manhattan distance**  
+  - **Feature scaling** to ensure proper comparison  
+- **Task 2 – Classification**:
+  - Binary classification with **K-Nearest Neighbors** (KNN)  
+  - **F1-score** for model evaluation  
+  - Comparison against dummy classifier baseline  
+- **Task 3 – Regression**:
+  - Custom implementation of **Linear Regression** using linear algebra  
+  - **Root Mean Squared Error (RMSE)** for evaluation  
+  - Comparison of scaled vs. unscaled features  
+- **Task 4 – Data Obfuscation**:
+  - Secure transformation via multiplication with an **invertible matrix**  
+  - Verification that prediction quality remains unchanged  
+  - Ensures **privacy without degrading model performance**
+
+## 📈 Key Findings and Conclusion  
+- **KNN** performed significantly better on **scaled data**, as unscaled features distorted distance-based predictions.  
+- **Linear Regression** achieved stable results, with moderate improvements after scaling.  
+- **Data obfuscation through matrix transformation** maintained model performance while anonymizing the dataset, making it a valid method for privacy protection.  
+- These findings demonstrate that **simple models**, when paired with proper **preprocessing** and **data protection techniques**, can be both powerful and secure.
+
+✅ **Conclusion**: Sure Tomorrow can confidently use machine learning to enhance customer experience and internal processes, while applying **data masking techniques** to comply with privacy standards.
